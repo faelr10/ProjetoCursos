@@ -1,0 +1,557 @@
+*{
+    font-family: 'Martel Sans', sans-serif;
+}
+body{
+    padding: 0;
+    background-color: #1D222C;
+    margin: 0;
+}
+
+.corpo{
+    display: flex;
+
+    min-height: 48rem;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.containers{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    min-height: 40rem;
+    align-items:center;
+    background-color: #1D222C;
+}
+
+
+/*-----------------------------------------------------------------------*/
+
+/*MENU*/
+
+.menu{
+    display: flex;
+    width: 98%;
+    height: 5rem;
+    background-color:#161419;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+/*-----------------------------------------------------------------------*/
+
+/*MENU LADO ESQUERDO*/
+
+.navesquerda{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.logomenu{
+    display: flex;
+    width: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.logomenu img{
+    display: flex;
+    width: 140px;
+    align-items: center;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+
+.navmeio{
+    display: flex;
+    width: 55%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.topicosesquerda{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+}
+
+.itenstopicosesquerda a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 14px;
+}
+
+.submenu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    display: none;
+    background-color: #252525;
+    width: 12rem;
+    justify-content: center;
+    border-radius: 3px;
+}
+.submenu a{
+    padding-left: 10px;
+    padding-top: 5px ;
+    padding-bottom:5px ;
+}
+
+.submenu a:hover{
+    background-color: rgb(122, 122, 122);
+}
+
+.itenstopicosesquerda:hover>.submenu{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------*/
+
+/*MENU LADO DIREITO*/
+
+.navdireita{
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.itenstopicosdireita a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/*-----------------------------------------------------------------------*/
+
+/*CORPO CURSOS*/
+
+.cursos{
+    display: flex;
+    width: 90%;
+    min-height: 40rem;
+    justify-content: space-between;
+    
+}
+
+.menulateralcursos{
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+    height: 65rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.listalateralcursos{
+    display: flex;
+    width: 93%;
+    height: 100%;
+    margin-top: 15px ;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.listalateralcursostitulo{
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    justify-content: start;
+    color: white;
+}
+
+.listalateralcursosbloco{
+    display: flex;
+    width: 100%;
+    height: 5rem;
+}
+
+.listalateralcursosbloco:hover{
+    background-color: #393939;
+    transition: 0.6s;
+}
+
+.listalateralcursosblocologo{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.listalateralcursosblocologo img{
+    display: flex;
+    width: 70px;
+}
+.listalateralcursosbloconome{
+    display: flex;
+    width: 69%;
+    color: white;
+    align-items: center;
+}
+
+.listascursos{
+    display: flex;
+    flex-direction: column;
+    width: 73%;
+}
+
+.listascursostitulo{
+    display: flex;
+    height: 6rem;
+    padding: 10px;
+}
+
+.listascursostitulo h1{
+    color: white;
+}
+
+.containerdecursos{
+    display: flex;
+    width: 100%;    
+    flex-direction:row;
+    flex-wrap: wrap; 
+    min-height: 18rem;
+    align-items: center;
+}
+
+
+.cardcurso{
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background-color:#393939;
+    border-radius:20px;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.cardcurso::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #1F1D23;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+
+.cardcurso:hover::before{
+    top: -70%;
+    transform: skewY(390deg);
+}
+
+.cardcurso::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 8em;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.cardcurso .imgbx{
+    position: relative;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1;
+    margin-left: 20px;
+}
+
+.cardcurso .imgbx img{
+    max-width: 100%;
+    transition: 0.5s;   
+}
+
+.cardcurso:hover .imgbx img{
+    max-width: 70%;
+}
+.cardcurso .contentBx{
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+.cardcurso .contentBx h1{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.cardcurso .contentBx .price{
+    font-size: 24px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.cardcurso .contentBx .buy{
+    position: relative;
+    top: 200px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: white;
+    text-decoration: none;
+    background: #2196f3;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.cardcurso:hover .contentBx .buy{
+    top: 0;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------*/
+/*HOME*/
+
+.listahorizontalmenu{
+    display: flex;
+    width: 80%;
+    height: 4rem;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.listahorizontalmenulinks img{
+    width: 7rem;
+    padding: 25px;
+    transition: transform .7s;
+}
+
+.listahorizontalmenulinks a img:hover{
+    transform: scale(1.8);
+}
+
+.bannerprincipal{
+    display: flex;
+    height: 25rem;
+    margin-top: 30px;
+    
+}
+
+.bannerprincipal img{
+    width: 100%;
+}
+
+.carroselrecemadicionados{
+    display: flex;
+    width: 90%;
+    height: 15rem;
+    margin-top: 10px;
+}
+
+/*-------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+/*--FORMULÁRIO CADASTRO--*/
+
+
+.cadastroform{
+    display: flex;
+    width: 33%;
+    height: 35rem;
+    border: 1px solid white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    border-radius: 10px;
+}
+
+.cadastroform form{
+    width: 70%;
+}
+
+.cadastroform form label{
+    color: white;
+}
+
+
+
+.loginform{
+    display: flex;
+    width: 33%;
+    height: 35rem;
+    border: 1px solid white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    border-radius: 10px;
+}
+
+.loginform form{
+    width: 70%;
+}
+
+.loginform form label{
+    color: white;
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------*/
+
+.footer{
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    background-color:black;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    color: white;
+}
+
+.msg{
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+/*-------------------------------------------------------------------------*/
+
+
+#search-container{
+    margin-top: 25px;
+    display: flex;
+    height: 25rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/pexels-jakub-novacek-924824.jpg");
+    background-size:100%;
+    image-resolution: 100%;
+
+}
+
+#search-container h1{
+    color: #fff;
+    font-weight: 900;
+}
+
+
+
+
+
+
+
+.menuperfilprincipal{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    flex-direction: column;
+}
+
+.menuperfilprincipaloff{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+
+
+
+.menuentrar a{
+    text-decoration: none;
+    background-color: transparent;
+    align-items: center;
+    color: white;
+}
+
+#iconperfil{
+    font-size: 50px;
+    color: white;
+    background-color: transparent;
+    align-items: center;
+    position: relative;
+
+}
+#iconperfil a{
+    position: relative;
+    align-items: center;
+}
+
+#iconperfil:hover{
+    color: white;
+}
+
+.submenuperfilprincipal{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 50px; 
+    align-items:center ;
+    justify-content: space-around;
+    text-decoration: none;
+    transition: 0.8s;
+}
+.submenuperfilprincipal a{
+    padding-left: 10px;
+    padding-top: 5px ;
+    padding-bottom:5px ;
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
+
+.menuperfilprincipal:hover>.submenuperfilprincipal{
+    display: flex;
+    flex-direction: column;
+}
